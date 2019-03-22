@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css.css">
+  <title>SchuiMenu</title>
+  <style>
+    #toggleMenu:checked ~ main {
+    margin-left: 10em;
+
+  }
+  #toggleMenu:checked ~ nav {
+    margin-left: 0em;
+
+  }
+  #toggleLable::before {
+    content: "\2630";
+    cursor: pointer;
+  }
+
+  #toggleMenu:checked ~ main #toggleLable::before{
+    content: "\2715";
+  }
+
+  nav{
+    position: fixed;
+    margin-left: -10em;
+    transition: margin-left .6s cubic-bezier(.17,.67,.83,1.36);
+    }
+
+    main{
+      position: absolute;
+        margin-left: 0;
+        transition: margin-left .6s cubic-bezier(.17,.67,.83,1.36);
+    }
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" id="toggleMenu">
+  <nav>
+    <h4>menu</h4>
+    <ul>
+      <li><a href="index.html">inhoud schuif</a></li>
+      <li><a href="menuSchuif.html">menu schuif</a></li>
+      <li><a href="allesSchuif.html" class="actief">alles schuif</a></li>
+      <li><a href="menuRechts.html">rechts schuif</a></li>
+    </ul>
+  </nav>
+  <main>
+    <label for="toggleMenu" id="toggleLable"></label>
+    <h1>Fire&shy;watch</h1>
+    <p><img src="image/cover-firewatch.png" alt="firewatch"></p>
+    <p>Firewatch is a fun game about watching a fire...</p>
+    <p>To be honest it is not really about that.</p>
+    <p>But it was more fun to say that..</p>
+    <p>Sorry to waste your time.</p>
+
+    <div id="validatie">
+      <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+        <img src="http://blog.boyet.com/blog/files/media/image/valid-html5-blue.png" alt="Valide HTML5"></a>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+        <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS">
+      </a>
+    </div>
+  </main>
+</body>
+
+</html>
